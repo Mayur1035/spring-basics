@@ -49,7 +49,7 @@ public class JarReaderUtils {
 
 	private void printOutput(Map<Class<?>, List<Method>> filteredClassMap) {
 		filteredClassMap.keySet().forEach(cls -> {
-			System.out.println("Class Name: " + cls.getName());
+			System.err.println("Class Name: " + cls.getName());
 			filteredClassMap.get(cls).forEach(method -> {
 				System.out.println("Method Name: " + method.getName());
 				Parameter[] params = method.getParameters();
@@ -66,7 +66,7 @@ public class JarReaderUtils {
 				System.out.println("#############");
 			});
 
-			System.out.println("*********************************************");
+			System.err.println("*********************************************");
 		});
 
 	}
